@@ -2,6 +2,11 @@
 
 A simple calculator made with HTML, CSS, and JavaScript.
 
+
+## Screenshot
+
+![Calculator App](screenshot.png)
+
 ## Features
 - Addition
 - Subtraction
