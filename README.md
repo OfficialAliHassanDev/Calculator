@@ -3,6 +3,10 @@
 A simple calculator made with HTML, CSS, and JavaScript.
 
 
+## 🚀 Live Demo
+👉 https://officialalihassandev.github.io/Calculator/
+
+
 ## Screenshot
 
 ![Calculator App](screenshot.png)
