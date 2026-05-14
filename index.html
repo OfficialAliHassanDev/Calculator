@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Calculator</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      padding: 20px;
+    }
+
+    .calculator{
+      width: 100%;
+      max-width: 420px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      text-align: center;
+      color: white;
+    }
+
+    .calculator h1{
+      margin-bottom: 25px;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    .input-box{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    input{
+      width: 100%;
+      padding: 14px;
+      border: none;
+      outline: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      transition: 0.3s;
+    }
+
+    input::placeholder{
+      color: #ddd;
+    }
+
+    input:focus{
+      transform: scale(1.03);
+      border: 2px solid #00c6ff;
+      background: rgba(255,255,255,0.2);
+    }
+
+    .buttons{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    button{
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+     .btnblu{
+        margin-top: 15px;
+         padding: 14px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      width: 100%;
+     }
+
+    button:hover{
+      transform: translateY(-5px) scale(1.05);
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+    }
+
+    button:active{
+      transform: scale(0.95);
+    }
+
+    #result{
+      margin-top: 25px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 12px;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #showtable{
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-top: 20px;
+      text-align: center;
+      background: rgba(255,255,255,0.08);
+      padding: 15px;
+      border-radius: 12px;
+      line-height: 1.8;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    @media (max-width: 500px){
+
+      .calculator{
+        padding: 20px;
+      }
+
+      .calculator h1{
+        font-size: 1.5rem;
+      }
+
+      button{
+        padding: 12px;
+        font-size: 1rem;
+      }
+
+      #result{
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="calculator">
+
+    <h1>CALCULATOR</h1>
+
+    <div class="input-box">
+      <input type="number" id="data1" placeholder="Enter first number">
+
+      <input type="number" id="data2" placeholder="Enter second number">
+    </div>
+
+    <div class="buttons">
+      <button onclick="calculate('+')">+</button>
+
+      <button onclick="calculate('-')">-</button>
+
+      <button onclick="calculate('*')">*</button>
+
+      <button onclick="calculate('/')">/</button>
+
+      <button onclick="calculate('%')">%</button>
+
+      <button onclick="showtable()">Table</button>
+    </div>
+    <button class="btnblu" onclick="reset()">Reset</button>
+
+    <div id="result">Result Here</div>
+
+    <div id="showtable">Table Here</div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
